@@ -1,0 +1,5 @@
+project_base.db
+pyvenv.cfg
+Include/
+Lib/
+Scripts/
