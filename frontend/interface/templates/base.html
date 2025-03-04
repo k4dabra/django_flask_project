@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/interface/css/base.css">
     <title>{% block tab_title %}{% endblock %}</title>
 </head>
 <body>
-    {% block title %}{% endblock %}
+    <header>
+        {% block title %}{% endblock %}
+    </header>
     <br>
     <br>
     <main>
         {% block main %}{% endblock %}
     </main>
+    <br>
+    <br>
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
 </body>
 </html>

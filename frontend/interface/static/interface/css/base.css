@@ -1,0 +1,48 @@
+body {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+header, main {
+    text-align: center;
+}
+
+form label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+}
+
+form textarea {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+#add_btn {
+    font-family: monospace;
+    padding: 50px;
+    background-color: rgba(0, 255, 0, 1);
+}
+
+#get_btn {
+    font-family: monospace;
+    padding: 50px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(26, 26, 255, 1);
+}
+
+#erro {
+    color: rgba(255, 0, 0, 1);
+}
+
+#homepage_btn {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 0, 1);
+    padding: 15px 40px;
+}
+
+.result_search_key {
+    text-decoration: underline;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block tab_title %} SEARCH RESULT {% endblock %}
+
+{% block title %}
+<h1>RESULT FOR: <span class="result_search_key">{{ search_key }}</span></h1>
+{% endblock %}
+
+{% block main %}
+{% for i in res %}
+    <p>NAME: {{ i.name }}</p>
+    <p>EMAIL: {{ i.login }}</p>
+    <pre>REGISTRATION DATE: {{ i.timestamp }}</pre>
+    <br>
+    <p>##############################################################</p>
+    <br>
+{% endfor %}
+{% endblock %}

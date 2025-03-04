@@ -30,7 +30,7 @@ Base.metadata.create_all(bind=db)
 
 app = Flask(__name__)
 
-@app.route("/add",methods=["POST"])
+@app.route("/add/",methods=["POST"])
 def add():
     req = request.get_json()
     timestamp_str = datetime.now().strftime(TIMESTAMP_FORMAT)
@@ -38,10 +38,9 @@ def add():
     user = User(name=req["name"],login=req["login"],password=req["password"],timestamp=timestamp_db)
     s.add(user)
     s.commit()
-    res = {"msg":"Save operation completed!!"}
-    return jsonify(res)
+    return "Added successfully!"
 
-@app.route("/read",methods=["get"]) # a validação de campos vazios deve ser feita no django
+@app.route("/read",methods=["GET"])
 def read():
     search_result = []
     name = request.args.get("name")
@@ -53,6 +52,7 @@ def read():
                 "id": i.id,
                 "name": i.name,
                 "login": i.login,
+                "password": "******",
                 "timestamp":i.timestamp
             }
             search_result.append(res_obj)
@@ -63,6 +63,7 @@ def read():
                 "id": i.id,
                 "name": i.name,
                 "login": i.login,
+                "password": "******",
                 "timestamp":i.timestamp
             }
             search_result.append(res_obj)
